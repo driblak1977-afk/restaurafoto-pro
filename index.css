@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface:#FFF7ED;
+  --surface-2:#FFFFFF;
+  --surface-3:#FDEADF;
+  --ink:#221A12;
+  --muted:#7A6A58;
+  --line:#EADCCB;
+  --primary:#E4572E;
+  --primary-strong:#C53E18;
+  --primary-soft:#FFE4D6;
+  --success:#1E7A4D;
+  --warning:#FFF3CD;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --surface:#1A130E;
+    --surface-2:#241B14;
+    --surface-3:#312219;
+    --ink:#FFF3E6;
+    --muted:#C9B8A6;
+    --line:#463528;
+    --primary:#FF6B3D;
+    --primary-strong:#FF7A4F;
+    --primary-soft:#3A2218;
+    --success:#6FD79A;
+    --warning:#3A2E14;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,Segoe UI,sans-serif}
+.font-display{font-family:'Fraunces',Georgia,serif}
+input[type="range"]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;cursor:pointer}
+input[type="range"]::-webkit-slider-runnable-track{height:6px;border-radius:999px;background:var(--line)}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;margin-top:-8px;border-radius:50%;background:var(--primary);border:3px solid var(--surface-2);box-shadow:0 2px 8px rgba(0,0,0,.22)}
+input[type="range"]::-moz-range-track{height:6px;border-radius:999px;background:var(--line)}
+input[type="range"]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--primary);border:3px solid var(--surface-2)}
+input[type="range"]:focus-visible{outline:2px solid var(--primary);outline-offset:4px;border-radius:999px}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{scrollbar-width:none}
